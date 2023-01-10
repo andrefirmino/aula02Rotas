@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Hello World</h1>
+    <p>
+        <a href='/contato'>Clique aqui para contato</a>
 </body>
 </html>
