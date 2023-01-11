@@ -26,4 +26,4 @@ Route::get('/pokemon/{nome}', [PokemonController::class, 'pokemon']);
 
 Route::get('/calculadora', [CalculadoraController::class, 'calculadora']);
 
-Route::get('/calcular/{num1}/{num2}/{operador}', [CalculadoraController::class, 'calcular']);
+Route::post('/calcular', [CalculadoraController::class, 'calcular']);

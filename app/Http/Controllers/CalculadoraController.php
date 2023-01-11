@@ -10,11 +10,24 @@ class CalculadoraController extends Controller
         return view('calculadora');
     }
 
-    public function calcular($num1, $num2, $operador){
+    public function calcular(Request $request){
         
-        $resultado = $num1 || $operador ||  $num2;
-        
-        return $resultado; 
+        $num1 = $request->num1;
+        $num2 = $request->num2;
+        $operador = $request->operador;
+        $resultado = 0;
+
+        if($operador === "+"){
+            $resultado = $num1 + $num2; 
+        }else if($operador === "-"){
+            $resultado = $num1 - $num2;
+        }else if($operador === "/"){
+            $resultado = $num1 / $num2;
+        }else{
+            $resultado = $num1 * $num2;
+        }
+
+        return view('calcular', compact('resultado'));
 
     }
 }
